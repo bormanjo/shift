@@ -20,6 +20,9 @@ RUN wget -qO- https://github.com/hanlonlab/shift-python/releases/download/1.0.1/
 # Clean conda packages cache
 RUN conda clean --all -y
 
+RUN apt-get install pandoc -y
+RUN apt-get install texlive-xetex -y
+
 # Set working directory 
 WORKDIR /home/notebooks
 

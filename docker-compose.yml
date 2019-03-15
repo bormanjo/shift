@@ -1,7 +1,7 @@
 version: '3'
 services:
   notebook:
-    container_name: shift-python-conda3
+    container_name: shift-python-conda-5.2.0
     ports:
       - "8888:8888"
     volumes:
