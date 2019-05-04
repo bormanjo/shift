@@ -13,7 +13,7 @@ RUN conda update --all -y
 
 # Install shift-python
 RUN conda install libpq
-RUN wget -qO- https://github.com/hanlonlab/shift-python/releases/download/1.0.1/shift-python_1.0.1_conda_linux64.zip | bsdtar -xvf- && \
+RUN wget -qO- https://github.com/hanlonlab/shift-python/releases/download/v1.2.0/shift-python_1.2.0_conda_linux64.zip | bsdtar -xvf- && \
     cd shift* && \
     conda install *.tar.bz2
 
@@ -21,7 +21,6 @@ RUN wget -qO- https://github.com/hanlonlab/shift-python/releases/download/1.0.1/
 RUN conda clean --all -y
 
 RUN apt-get install pandoc -y
-RUN apt-get install texlive-xetex -y
 
 # Set working directory 
 WORKDIR /home/notebooks
